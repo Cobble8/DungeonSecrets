@@ -1,0 +1,16 @@
+[
+{
+  "modid": "dgnscrts",
+  "name": "DungeonSecrets",
+  "description": "An extention to the mod SkyblockPersonalized",
+  "version": "",
+  "mcversion": "1.8.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Cobble8"],
+  "credits": "",
+  "logoFile": "assets/sbp/textures/logo_file.png",
+  "screenshots": [],
+  "dependencies": ["SkyblockPersonalized"]
+}
+]
