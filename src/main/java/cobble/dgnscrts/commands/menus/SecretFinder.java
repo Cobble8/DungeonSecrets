@@ -49,16 +49,19 @@ public class SecretFinder extends CommandBase{
 
 	@Override
 	public void processCommand(ICommandSender sender, String[] args) throws CommandException {
-		if((Boolean) DataGetter.find("modToggle")) {
-			
-			if(args.length > 0) args0 = args[0];
-			if(args.length > 1) args1 = args[1];
-			argsLength = args.length;
-			Thread runCmd = new SecretsThread();
-			runCmd.start();
-			
-			
-		} else Utils.enableMod();	
+		try {
+			if((Boolean) DataGetter.find("modToggle")) {
+				
+				if(args.length > 0) args0 = args[0];
+				if(args.length > 1) args1 = args[1];
+				argsLength = args.length;
+				Thread runCmd = new SecretsThread();
+				runCmd.start();
+				
+				
+			} else Utils.enableMod();
+		} catch (Exception e) {
+		}	
 	}
 	
 	@Override

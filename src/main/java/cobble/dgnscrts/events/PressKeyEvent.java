@@ -11,7 +11,7 @@ public class PressKeyEvent
 {
 	//public static Boolean timerOn = false;
     @SubscribeEvent
-    public void onKeyInput(KeyInputEvent event) throws InterruptedException
+    public void onKeyInput(KeyInputEvent event) throws Exception
     {
     	
     		

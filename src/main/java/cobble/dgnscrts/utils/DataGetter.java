@@ -11,7 +11,7 @@ import cobble.dgnscrts.simplejson.parser.JSONParser;
 
 public class DataGetter
 {			
-	public static Object find(String objectName) {
+	public static Object find(String objectName) throws Exception  {
 		JSONParser parser = new JSONParser();
 		Object dataOutput = null;
 		try {
@@ -23,7 +23,7 @@ public class DataGetter
 			
 
 		} catch (Exception e) {
-			Utils.print("[SBP] Couldn't find key: \""+objectName+"\" in the config");
+			throw new Exception("Download SkyblockPersonalized as well!");
 		}
 		return dataOutput;
 	}

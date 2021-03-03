@@ -16,6 +16,51 @@ public class OverrideThread extends Thread {
 			RenderGuiHandler.roomShape="1x1";
 			//1 Secret
 			switch (SecretOverride.args1) {
+			
+				case "dueces":
+					RenderGuiHandler.roomSecretsID = "dueces";
+					RenderGuiHandler.maxSecrets = 2;
+					RenderGuiHandler.currentSecretText.add("Secret 1 & 2 - Item and bat behind superboom");
+					RenderGuiHandler.currentSecretText.add("Secret 3 - Chest behind superboom wall (that first chest is a trap chest that will drop tnt)");
+					break;
+			
+				case "small-stairs":
+					RenderGuiHandler.roomSecretsID = "small-stairs";
+					RenderGuiHandler.maxSecrets = 2;
+					RenderGuiHandler.currentSecretText.add("Secret 1 - Item");
+					RenderGuiHandler.currentSecretText.add("Secret 2 - Chest behind superboom (up the stairs)");
+					break;
+					
+				case "overgrown":
+					RenderGuiHandler.roomSecretsID = "overgrown";
+					RenderGuiHandler.maxSecrets = 5;
+					RenderGuiHandler.currentSecretText.add("Secret 1 - Item behind superboom");
+					RenderGuiHandler.currentSecretText.add("Secret 2 (1/2) - Pull lever under green skull");
+					RenderGuiHandler.currentSecretText.add("Secret 2 (2/2) - Go through here to chest");
+					RenderGuiHandler.currentSecretText.add("Secret 2 (2/2) - Go through here to chest");
+					RenderGuiHandler.currentSecretText.add("Secret 3 - Wither essence");
+					break;
+					
+				case "locked-away":
+					RenderGuiHandler.roomSecretsID = "locked-away";
+					RenderGuiHandler.maxSecrets = 2;
+					RenderGuiHandler.currentSecretText.add("Doorway on the left");
+					RenderGuiHandler.currentSecretText.add("Secret 1 - Chest");
+					break;
+				case "silvers-sword":
+					RenderGuiHandler.roomSecretsID = "silvers-sword";
+					RenderGuiHandler.maxSecrets = 1;
+					RenderGuiHandler.currentSecretText.add("Secret 1 - Chest behind superboom");
+					break;
+					
+					
+				case "carpets":
+					RenderGuiHandler.roomSecretsID = "carpets";
+					RenderGuiHandler.maxSecrets = 1;
+					RenderGuiHandler.currentSecretText.add("Secret 1 - Chest");
+					break;
+					
+			
 				case "arrow-trap":
 					RenderGuiHandler.roomSecretsID = "arrow-trap";
 					RenderGuiHandler.maxSecrets = 3;
@@ -729,6 +774,7 @@ public class OverrideThread extends Thread {
 					break;
 			}
 		} else if(SecretOverride.args0.toLowerCase().equals("puzzles") ) {
+			RenderGuiHandler.roomShape="puzzles";
 			switch (SecretOverride.args1) {
 				case "blaze":
 					RenderGuiHandler.roomSecretsID = "blaze";
@@ -758,13 +804,7 @@ public class OverrideThread extends Thread {
 					RenderGuiHandler.currentSecretText.add("Secret 3 - Bat");
 					RenderGuiHandler.currentSecretText.add("Lever for room completion");
 					break;
-				case "open":
-					RenderGuiHandler.roomSecretsID = "open";
-					RenderGuiHandler.maxSecrets = 3;
-					RenderGuiHandler.currentSecretText.add("Secret 1 - Chest");
-					RenderGuiHandler.currentSecretText.add("Secret 2 - Bat");
-					RenderGuiHandler.currentSecretText.add("Secret 3/4 - 2 Wither essence");
-					break;
+		
 			}
 		} else {
 			Utils.errMsg("[sys]: Failed to find secret!");

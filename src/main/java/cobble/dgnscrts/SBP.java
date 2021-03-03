@@ -9,6 +9,7 @@ import cobble.dgnscrts.handlers.KeyBindingHandler;
 import cobble.dgnscrts.handlers.RenderGuiHandler;
 import cobble.dgnscrts.utils.DataGetter;
 import cobble.dgnscrts.utils.Reference;
+import cobble.dgnscrts.utils.Utils;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +23,7 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 public class SBP 
 {
 	public static Boolean firstLaunch = false;
+	public static int textStyle = 0;
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) throws JsonSyntaxException, Exception
 	{
@@ -35,9 +37,10 @@ public class SBP
 	}
 	
 	@EventHandler
-	public static void init(FMLInitializationEvent event)
+	public static void init(FMLInitializationEvent event) throws Exception
 	{
-		
+		textStyle = Integer.parseInt(DataGetter.find("textStyle")+"");
+		Utils.chromaSpeed = Integer.parseInt(DataGetter.find("chromaSpeed")+"");
 		//Big Mod Stuff
 		if((Boolean) DataGetter.find("scrtToggle")) {
 			ClientCommandHandler.instance.registerCommand(new SecretFinder());

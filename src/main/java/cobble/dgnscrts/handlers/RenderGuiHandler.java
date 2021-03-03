@@ -3,6 +3,7 @@ package cobble.dgnscrts.handlers;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import cobble.dgnscrts.SBP;
 import cobble.dgnscrts.gui.screen.SecretImage;
 import cobble.dgnscrts.utils.DataGetter;
 import cobble.dgnscrts.utils.Utils;
@@ -23,7 +24,7 @@ public class RenderGuiHandler {
 	public static ArrayList<String> currentSecretText = new ArrayList();
 	private int i=0;
 	@SubscribeEvent
-	public void onRenderGui(RenderGameOverlayEvent.Post event) throws IOException, NumberFormatException, IllegalAccessException {
+	public void onRenderGui(RenderGameOverlayEvent.Post event) throws Exception {
 		
 		
 		if(roomSecretsID != "NONE" && roomShape != "NONE") {
@@ -50,33 +51,7 @@ public class RenderGuiHandler {
 	} else if(i == 600) {
 		SecretImage.scrtColorID = Integer.parseInt(DataGetter.find("scrtTextColor")+"");
 	} else if(i == 700) {
-		SecretImage.transparent = (Boolean) DataGetter.find("scrtTransparent");
-		/*if(Utils.getCurrentActionBar().toLowerCase().contains("secrets")) {
-				int currSecretsInt = 0;
-				String[] tempArray = Utils.getCurrentActionBar().split(" ");
-				for(int i=0; i<tempArray.length;i++) {
-					if(tempArray[i].contains("Secrets")) {
-						currSecretsInt = i-1;
-					}
-				}
-				String scrtsFind = Utils.stripColor(tempArray[currSecretsInt]);
-				if(!scrtsFind.equals("0/0")) {
-					String[] tmpCurrScrts = scrtsFind.split("/");
-					Double currScrts = 0.0;
-					if(tmpCurrScrts.length > 1) {
-						currScrts = new Double(Integer.parseInt(tmpCurrScrts[0]) / Integer.parseInt(tmpCurrScrts[1]));
-					}
-					
-					//Utils.sendMessage(currScrts+"");
-					if(currScrts.equals(1.0)) {
-						RenderGuiHandler.roomSecretsID="NONE";
-					}
-				}
-				
-				
-				
-				
-			}*/
+		SBP.textStyle = Integer.parseInt(DataGetter.find("textStyle")+"");
 		i=0;
 	}
 	

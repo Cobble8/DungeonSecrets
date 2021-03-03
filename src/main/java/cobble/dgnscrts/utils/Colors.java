@@ -21,7 +21,8 @@ public class Colors {
 	public static final String GRAY = c+"7";
 	public static final String DARK_GRAY = c+"8";
 	public static final String BLACK = c+"0";
-
+	public static final String CHROMA = c+"z";
+	
 	public static final String RESET = c+"r";
 	public static final String STRIKETHROUGH = c+"m";
 	public static final String BOLD = c+"l";
