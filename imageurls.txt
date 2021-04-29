@@ -108,7 +108,7 @@ https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacomb
 https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/scaffolding-2/1.png,
 https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/silvers-sword-1/0.png,
 https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/slabs-2/0.png,
-https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/sloth-2/0.png,
+https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/sloth-1/0.png,
 https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/small-stairs-2/0.png,
 https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/small-stairs-2/1.png,
 https://raw.githubusercontent.com/Cobble8/DungeonSecrets/master/secrets/catacombs/1x1/spikes-3/0.png,
